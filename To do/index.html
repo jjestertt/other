@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>To do list</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <h1 class="header-wrapper__text">Hoolist</h1>
+                    <p class="header__description">Твой личный список дел</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- tasks -->
+        <section class="section tasks">
+            <div class="container">
+                <div class="section__inner get__inner">
+                    <ol class="tasks-list">
+                        <li class="tasks-list__item tasks-list__item-empty">Список заданий пуст</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- add task -->
+        <section class="section add-task">
+            <div class="container">
+                <div class="section__inner get__inner">
+                    <h2 class=" section__title add-task__title">Имя
+                        задания:</h2>
+                    <form action="" class="add-task__form">
+                        <input class="add-task__form-text" autocomplete="off" name="form-text" type="text"
+                            placeholder="Введите сюда свое задание">
+                        <button class="add-task__form-button" type="submit">Добавить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- Complete -->
+<!-- <li class="tasks-list__item">
+    <p class="tasks-list__item-text tasks-list__item-text--complete">Купить кашу</p>
+    <div class="tasks-list__buttons tasks-list__buttons--complete">
+        <div class="button tasks-list__item-check tasks-list__item-check--complete"><span></span><span></span></div>
+        <div class="button tasks-list__item-delete"><span></span><span></span></div>
+    </div>
+</li> -->

@@ -1,0 +1,167 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+  }
+body, html { 
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+a {
+    text-decoration: none; 
+    color: inherit;
+  }
+ul li{
+    list-style: none;
+  }
+h1, h2, h3, h4, ul, li, form, input {
+    margin: 0;
+    padding: 0; 
+}
+.wrapper{
+  position: relative;
+  min-height: 100%;
+  padding-bottom:255px;
+  width: 100%;
+  background-color: #38361f29;
+}
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.header{
+  padding: 15px 0;
+  &-wrapper{
+    padding: 15px;
+    background: rgb(25, 25, 25);
+    color: darkorange;
+    text-align: center;
+  }
+  &-wrapper__text{
+    margin-bottom: 3px;
+  }
+}
+.section{
+    &__inner{
+      background: rgb(235, 235, 235);
+      padding: 20px;
+  }
+    &__title{
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px 15px;
+      display: block;
+      font-weight: normal;
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+}
+  .tasks{
+    &__title{
+      margin-bottom: 10px;
+    }
+    &-list{
+      max-height: 40vh;
+      overflow: auto;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &-list__item {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px 15px;
+        align-items: flex-start;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    &-list__item-text{
+      line-height: 30px;
+      padding-right: 15px;
+    }
+    &-list__item-empty{
+      padding: 24px 15px;
+    }
+    &-list__buttons{
+      display: flex;
+    }
+    & .button {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      border: 1px solid rgb(56, 56, 56);
+      outline: none;
+      transition: 600ms;
+      &:last-child{
+        margin-left: 10px;
+      }
+      & span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 28px;
+        height: 28px;
+        background-size: cover;
+      }
+    }
+    &-list__icon-check{
+      background-image: url(..//img/check.png);
+    }
+    &-list__item-delete span{
+      background-image: url(..//img/delete.png);
+    }
+    //Выполненая задача 
+    &-list__item--complete{
+      background-color: #90ee9063;
+    }
+    &-list__item-text--complete{
+      text-decoration: line-through;
+    }
+    &-list__icon-check--complete{
+      background-image: url(..//img/uncheck.png);
+    }
+  }
+  .add-task{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    &__form{
+      &-text{
+        width: 100%;
+        padding: 8px 15px;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        height: 60px;
+      }
+      &-button{
+        padding: 15px 30px;
+        border: none;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        background-color: dodgerblue;
+        color: white;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+  //media
+  @media (min-width: 992px){
+    .tasks .button{
+      &:hover{
+        transform: scale(1.1);
+        }
+      }
+    }
+  
+
+
+ 
